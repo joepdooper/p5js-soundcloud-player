@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="P5js Music Player">
+    <meta name="keywords" content="P5js Music Player">
+    <meta name="author" content="Dooper">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 days">
+    <meta property="og:title" content="P5js Music Player">
+    <meta property="og:site_name" content="P5js Music Player">
+    <meta property="og:url" content="https://github.com/joepdooper/p5js-music-player">
+    <meta property="og:description" content="P5js Music Player">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="P5js Music Player">
+    <meta name="twitter:description" content="P5js Music Player">
+    <meta name="twitter:image" content="">
+    <title>P5js Player</title>
+    <!-- Montauk -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link rel="shortcut icon" type="image/gif" href="images/favicon/favicon.gif">
+    <link rel="shortcut icon" type="image/png" href="images/favicon/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/player.css"/>
+    <!-- SCRIPT -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=performance.now"></script>
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.dom.min.js"></script>
+    <script src="js/p5.sound.min.js"></script>
+  </head>
+  <body>
+
+    <div class="outer">
+      <div class="middle">
+        <div class="inner">
+
+          <div id="player">
+            <div id="canvaswrapper"></div>
+            <div class="songinfo">
+              <div id="songname"></div>
+              <div id="songtime"></div>
+            </div>
+            <div class="progress">
+              <progress id="loadingBar" value="0" max="100"></progress>
+              <progress id="progressBar" value="0" max="100"></progress>
+            </div>
+            <div id="p5_loading" class="loadingclass"></div>
+            <div class="controls">
+              <div class="ctrlbttns">
+                <button type="button" id="prev"></button>
+                <button type="button" id="play"></button>
+                <button type="button" id="next"></button>
+              </div>
+            </div>
+            <nav id="selectSound"></nav>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
+    <script src="js/sketch.js"></script>
+  </body>
+</html>

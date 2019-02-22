@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 18 24" style="enable-background:new 0 0 18 24;" xml:space="preserve">
+<title>Pause</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Playlist-view" transform="translate(-313.000000, -671.000000)">
+		<g id="Group" transform="translate(270.000000, 671.000000)">
+			<g id="Main-Control" transform="translate(43.000000, 0.000000)">
+				<path id="Pause" d="M0,24h6V0H0V24z M12,24h6V0h-6V24z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

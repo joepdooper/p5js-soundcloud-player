@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 120 30" style="enable-background:new 0 0 120 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF4500;}
+	.st1{fill:#FF4500;}
+</style>
+<circle class="st0" cx="15" cy="15" r="15">
+<animate  accumulate="none" additive="replace" attributeName="r" begin="0s" calcMode="linear" dur="0.5s" fill="remove" from="15" repeatCount="indefinite" restart="always" to="15" values="15;9;15">
+	</animate>
+<animate  accumulate="none" additive="replace" begin="0s" calcMode="linear" dur="0.8s" repeatCount="indefinite" restart="always" values="1;1;1">
+	</animate>
+</circle>
+<circle class="st1" cx="60" cy="15" r="9">
+<animate  accumulate="none" additive="replace" attributeName="r" begin="0s" calcMode="linear" dur="0.5s" fill="remove" from="9" repeatCount="indefinite" restart="always" to="9" values="9;15;9">
+	</animate>
+<animate  accumulate="none" additive="replace" begin="0s" calcMode="linear" dur="0.8s" repeatCount="indefinite" restart="always" values="1;1;1">
+	</animate>
+</circle>
+<circle class="st0" cx="105" cy="15" r="15">
+<animate  accumulate="none" additive="replace" attributeName="r" begin="0s" calcMode="linear" dur="0.5s" fill="remove" from="15" repeatCount="indefinite" restart="always" to="15" values="15;9;15">
+	</animate>
+<animate  accumulate="none" additive="replace" begin="0s" calcMode="linear" dur="0.8s" repeatCount="indefinite" restart="always" values="1;1;1">
+	</animate>
+</circle>
+</svg>

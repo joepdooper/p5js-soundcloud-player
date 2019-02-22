@@ -1,0 +1,218 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  color: #222;
+  margin: 0;
+  height: 100%;
+}
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+img,
+canvas {
+  display:block;
+  border: 0;
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-collapse:collapse;
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+#defaultCanvas0 {
+  position: relative;
+  pointer-events: none;
+}
+#player {
+  position: relative;
+  pointer-events: auto;
+  max-width:300px;
+  background-color:white;
+  margin:0 auto;
+}
+#canvaswrapper {
+  height:150px;
+  width:100%;
+  background-color: #FF4500;
+}
+.songinfo {
+  padding:20px;
+}
+#songname,
+#songtime {
+  text-align: center;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 32px;
+  color: #FF4500;
+}
+#songtime {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 16px;
+}
+#p5_loading img,
+#songname img {
+  margin:0 auto;
+}
+#selectSound ul {
+  list-style: none;
+  text-align: center;
+}
+#selectSound ul li {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  border-bottom: solid 1px #222;
+}
+#selectSound ul li.active {
+  font-weight: bold;
+}
+.controls {
+  position: relative;
+}
+.controls .ctrlbttns {
+  overflow: auto;
+  width:180px;
+  margin:0 auto;
+}
+.controls .ctrlbttns button {
+  cursor: pointer;
+  border: none;
+  width: 60px;
+  height: 60px;
+  display: block;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+}
+.controls button#play {
+  background-image: url('../img/small-play.svg');
+  background-size: 17px 24px;
+}
+.controls button#pause {
+  background-image: url('../img/small-pause.svg');
+  background-size: 18px 24px;
+}
+.controls button#prev {
+  background-image: url('../img/small-previous.svg');
+  background-size: 15px 17px;
+}
+.controls button#next {
+  background-image: url('../img/small-next.svg');
+  background-size: 15px 17px;
+}
+progress,
+progress[role] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  background-size: auto;
+  background-color: #fff;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+progress[role]:after {
+	background-image: none;
+}
+progress[role] strong {
+	display: none;
+}
+progress,
+progress[role][aria-valuenow] {
+   background: transparent !important;
+}
+progress::-webkit-progress-bar {
+    background: transparent;
+}
+/* IE10 */
+progress#loadingBar {
+  position: absolute;
+  color: #ccc;
+}
+/* Firefox */
+progress#loadingBar::-moz-progress-bar {
+  position: absolute;
+  background: #ccc;
+}
+/* Chrome */
+progress#loadingBar::-webkit-progress-value {
+  position: absolute;
+  background: #ccc;
+}
+/* Polyfill */
+progress#loadingBar[aria-valuenow]:before  {
+  position: absolute;
+  background: #ccc;
+}
+/* IE10 */
+progress#progressBar {
+  position: relative;
+  color: #000;
+}
+/* Firefox */
+progress#progressBar::-moz-progress-bar {
+  position: relative;
+  background: #000;
+}
+/* Chrome */
+progress#progressBar::-webkit-progress-value {
+  position: relative;
+  background: #000;
+}
+/* Polyfill */
+progress#progressBar[aria-valuenow]:before  {
+  position: relative;
+  background: #000;
+}
+
+@media only screen and (max-width:480px) {
+  .header {
+    background: #fff;
+  }
+  .hero {
+  	position: fixed;
+  	top: 60px;
+  	left: 40px;
+  	bottom: 60px;
+  	right: 40px;
+  	overflow: hidden;
+  }
+  #songname {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width:320px) {
+  .hero {
+  	position: fixed;
+  	top: 60px;
+  	left: 20px;
+  	bottom: 60px;
+  	right: 20px;
+  	overflow: hidden;
+  }
+}
