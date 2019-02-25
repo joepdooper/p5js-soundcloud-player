@@ -13,7 +13,7 @@ https://joepdooper.github.io/p5js-soundcloud-player
 
 ### user/tracks
 ```javascript
-var PLAYLIST_URL = 'https://soundcloud.com/user/tracks';
+var PLAYLIST_URL = 'https://soundcloud.com/USER/tracks';
 ```
 ```javascript
 for(var i=0;i<playlist.length;i++) {
@@ -24,7 +24,7 @@ for(var i=0;i<playlist.length;i++) {
 
 ### user/sets
 ```javascript
-var PLAYLIST_URL = 'https://soundcloud.com/user/sets/classics';
+var PLAYLIST_URL = 'https://soundcloud.com/USER/sets/SETNAME';
 ```
 ```javascript
 for(var i=0;i<playlist.tracks.length;i++) {
