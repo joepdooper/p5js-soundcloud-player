@@ -1,5 +1,5 @@
 //SoundCloud
-var CLIENT_ID = 'ZAfb7ggBa6uOlgny7cav77YDWemHlFVH';
+var CLIENT_ID = 'NmW1FlPaiL94ueEu7oziOWjYEzZzQDcK';
 var PLAYLIST_URL = 'https://soundcloud.com/fftb/sets/party';
 SC.initialize({
   client_id: CLIENT_ID
