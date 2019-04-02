@@ -72,6 +72,10 @@ canvas {
 #songname img {
   margin:0 auto;
 }
+#selectSound {
+  max-height: 198px;
+  overflow: scroll;
+}
 #selectSound ul {
   list-style: none;
   text-align: center;
