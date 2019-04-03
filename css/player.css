@@ -74,7 +74,7 @@ canvas {
 }
 #selectSound {
   max-height: 198px;
-  overflow: scroll;
+  overflow-y: auto;
 }
 #selectSound ul {
   list-style: none;
