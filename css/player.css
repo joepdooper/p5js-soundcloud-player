@@ -195,28 +195,7 @@ progress#progressBar[aria-valuenow]:before  {
 }
 
 @media only screen and (max-width:480px) {
-  .header {
-    background: #fff;
-  }
-  .hero {
-  	position: fixed;
-  	top: 60px;
-  	left: 40px;
-  	bottom: 60px;
-  	right: 40px;
-  	overflow: hidden;
-  }
   #songname {
     font-size: 25px;
-  }
-}
-@media only screen and (max-width:320px) {
-  .hero {
-  	position: fixed;
-  	top: 60px;
-  	left: 20px;
-  	bottom: 60px;
-  	right: 20px;
-  	overflow: hidden;
   }
 }
