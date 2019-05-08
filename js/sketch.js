@@ -27,7 +27,6 @@ var songName = document.getElementById('songname');
 var songTime = document.getElementById('songtime');
 var loadingBar = document.getElementById('loadingBar');
 var progressBar = document.getElementById('progressBar');
-var el = document.getElementsByClassName('tilt__front');
 var seconds, minutes, bass, mid, treble, list, ntgr;
 
 //Buttons
