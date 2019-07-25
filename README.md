@@ -1,6 +1,6 @@
 # p5js-soundcloud-player
 
-Music-player with visualization loading Soundcloud tracks! Works _out-of-the-box_.
+Music-player with visualisation loading Soundcloud tracks! Works _out-of-the-box_.
 
 #### Example
 
