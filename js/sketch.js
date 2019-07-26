@@ -1,3 +1,18 @@
+//Variable
+var sound;
+var urlList = [];
+var nameList = [];
+var currentIndex = 0;
+var buttonPlay = document.getElementById('play');
+var buttonPrev = document.getElementById('prev');
+var buttonNext = document.getElementById('next');
+var selectSound = document.getElementById('selectSound');
+var songName = document.getElementById('songname');
+var songTime = document.getElementById('songtime');
+var loadingBar = document.getElementById('loadingBar');
+var progressBar = document.getElementById('progressBar');
+var seconds, minutes, bass, mid, treble, list, ntgr;
+
 //SoundCloud
 var CLIENT_ID = 'NmW1FlPaiL94ueEu7oziOWjYEzZzQDcK';
 var PLAYLIST_URL = 'https://soundcloud.com/fftb/sets/party';
@@ -13,21 +28,6 @@ SC.resolve(PLAYLIST_URL).then(function(playlist){
 }).catch(function(error){
   console.log(error);
 });
-
-//Variable
-var sound;
-var urlList = [];
-var nameList = [];
-var currentIndex = 0;
-var buttonPlay = document.getElementById('play');
-var buttonPrev = document.getElementById('prev');
-var buttonNext = document.getElementById('next');
-var selectSound = document.getElementById('selectSound');
-var songName = document.getElementById('songname');
-var songTime = document.getElementById('songtime');
-var loadingBar = document.getElementById('loadingBar');
-var progressBar = document.getElementById('progressBar');
-var seconds, minutes, bass, mid, treble, list, ntgr;
 
 //Buttons
 buttonPlay.addEventListener('click', function() {
@@ -51,7 +51,8 @@ progressBar.addEventListener("click", function(progbar) {
 
 //loadSound callbacks
 function success() {
-  console.log(sound.isLoaded());
+  console.log('Sound is loaded : ' + sound.isLoaded());
+  sound.playMode('restart');
   sound.play();
   sound.onended(endSong);
 }
@@ -71,7 +72,9 @@ function preload() {
 }
 
 function touchStarted() {
-  getAudioContext().resume();
+  if (getAudioContext().state !== 'running') {
+    getAudioContext().resume();
+  }
 }
 
 //Setup
