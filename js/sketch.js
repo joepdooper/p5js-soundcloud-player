@@ -11,6 +11,7 @@ var songName = document.getElementById('songname');
 var songTime = document.getElementById('songtime');
 var loadingBar = document.getElementById('loadingBar');
 var progressBar = document.getElementById('progressBar');
+
 var seconds, minutes, bass, mid, treble, list, ntgr;
 
 //SoundCloud

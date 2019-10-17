@@ -67,6 +67,7 @@ canvas {
   font-weight: 900;
   font-size: 16px;
   line-height: 16px;
+  margin-top: 20px;
 }
 #p5_loading img,
 #songname img {
@@ -114,18 +115,22 @@ canvas {
 .controls button#play {
   background-image: url('../img/small-play.svg');
   background-size: 17px 24px;
+  outline: none;
 }
 .controls button#pause {
   background-image: url('../img/small-pause.svg');
   background-size: 18px 24px;
+  outline: none;
 }
 .controls button#prev {
   background-image: url('../img/small-previous.svg');
   background-size: 15px 17px;
+  outline: none;
 }
 .controls button#next {
   background-image: url('../img/small-next.svg');
   background-size: 15px 17px;
+  outline: none;
 }
 progress,
 progress[role] {
