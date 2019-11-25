@@ -36,3 +36,6 @@ for(var i=0;i<playlist.tracks.length;i++) {
   nameList.push(playlist.tracks[i].title);
 }
 ```
+
+#### Thanks
+Thank you [Spencer Evans](https://github.com/swevans) for the [unmute.min.js](https://github.com/swevans/unmute) file; it enables web audio playback with the ios mute switch on.
