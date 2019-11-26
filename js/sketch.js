@@ -15,7 +15,7 @@ var progressBar = document.getElementById('progressBar');
 var seconds, minutes, bass, mid, treble, list, ntgr;
 
 //SoundCloud
-var CLIENT_ID = 'ssV1Qfh3hGcBHMcuZ3bz3xHb3aoP5KUB';
+var CLIENT_ID = 'UW9ajvMgVdMMW3cdeBi8lPfN6dvOVGji';
 var PLAYLIST_URL = 'https://soundcloud.com/fftb/sets/party';
 SC.initialize({
   client_id: CLIENT_ID
