@@ -54,6 +54,7 @@ progressBar.addEventListener("click", function(progbar) {
 function success() {
   console.log('Sound is loaded : ' + sound.isLoaded());
   sound.playMode('restart');
+  unmute(sound);
   sound.play();
   sound.onended(endSong);
 }
