@@ -192,6 +192,7 @@ function changeSong(btn) {
   } else if (btn == progressBar) {
       sound.jump(sound.duration() * percent);
       buttonPlay.id = "pause";
+      setTimeout(function(){ Object.assign(sound, {_playing: true}); }, 100);
   }
 }
 //Playlist
