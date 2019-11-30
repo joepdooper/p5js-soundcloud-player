@@ -1,5 +1,5 @@
 //Variable
-var sound;
+var sound, seconds, minutes, bass, mid, treble, list, percent;
 var urlList = [];
 var nameList = [];
 var currentIndex = 0;
@@ -11,6 +11,8 @@ var songName = document.getElementById('songname');
 var songTime = document.getElementById('songtime');
 var loadingBar = document.getElementById('loadingBar');
 var progressBar = document.getElementById('progressBar');
+var start = true;
+var end = false;
 
 var seconds, minutes, bass, mid, treble, list, ntgr;
 
@@ -32,36 +34,47 @@ SC.resolve(PLAYLIST_URL).then(function(playlist){
 
 //Buttons
 buttonPlay.addEventListener('click', function() {
-  playCurrentSound();
+  if (start == true) {
+    changeSong(buttonPlay);
+  }
 }, false);
 buttonPrev.addEventListener('click', function() {
-  changeSong(prev);
+  if (start == true) {
+    changeSong(buttonPrev);
+  }
 }, false);
 buttonNext.addEventListener('click', function() {
-  changeSong(next);
+  if (start == true) {
+    changeSong(buttonNext);
+  }
 }, false);
 selectSound.addEventListener('click', function(eve) {
-  listitem = eve.target;
-  changeSong(select);
+  if (start == true) {
+    listitem = eve.target;
+    changeSong(selectSound);
+  }
 }, false);
 progressBar.addEventListener("click", function(progbar) {
-  var percent = (progbar.offsetX / this.offsetWidth);
-  sound.jump(sound.duration()*percent);
-  sound.onended(endSong);
+  percent = (progbar.offsetX / this.offsetWidth);
+  changeSong(progressBar);
 }, false);
 
 //loadSound callbacks
+//loadSound callbacks
 function success() {
-  console.log('Sound is loaded : ' + sound.isLoaded());
+  start = true;
   sound.playMode('restart');
+  sound.onended(endSong);
   unmute(sound);
   sound.play();
-  sound.onended(endSong);
+  console.log('Sound is loaded : ' + sound.isLoaded());
+  processLyrics(lrcText[currentIndex])
 }
 function error(fail) {
   console.log(fail);
 }
 function progress(percent) {
+  start = false;
   loadingBar.value = (percent*100) + 1;
   console.log((percent*100) + 1);
   songName.innerHTML = nameList[currentIndex];
@@ -103,6 +116,10 @@ function draw() {
   if (sound.isLoaded() && !sound.isPaused()) {
     songTime.innerHTML = ('0' + minutes).substr(-2) + ':' + ('0' + seconds).substr(-2);
     progressBar.value = 100 * (sound.currentTime() / sound.duration());
+    if (Math.floor(sound.currentTime()) == Math.floor(sound.duration()) && end != true) {
+      console.log('song ended');
+      end = true;
+    }
   }
   fft.analyze();
 
@@ -132,42 +149,50 @@ function draw() {
 };
 
 //Controls
+//Controls
 function playCurrentSound() {
   if (!sound.isPlaying() && !sound.isPaused()) {
-    buttonPlay.id = "pause";
     setup(urlList[currentIndex]);
     setSong();
   } else if (sound.isPaused()) {
-    buttonPlay.id = "pause";
     sound.play();
+    buttonPlay.id = "pause";
   } else {
     sound.pause();
     buttonPlay.id = "play";
   }
 }
 function changeSong(btn) {
-  if (sound.isPaused()) {
-    sound.play();
-  }
-  sound.stop();
-  sound.onended(pauseEndSong);
-  if (btn == next) {
-    currentIndex = Math.min(currentIndex + 1, urlList.length - 1);
+  if (btn == buttonPlay) {
     playCurrentSound();
-  }
-  if (btn == prev) {
-    currentIndex = Math.max(currentIndex - 1, 0);
+  } else if (btn == buttonNext) {
+    sound.stop();
+    if (currentIndex == (urlList.length - 1)) {
+      currentIndex = '0';
+    } else {
+      currentIndex = Math.min(currentIndex + 1, urlList.length - 1);
+    }
     playCurrentSound();
-  }
-  if (btn == select) {
+  } else if (btn == buttonPrev) {
+    sound.stop();
+    if (currentIndex == 0) {
+      currentIndex = (urlList.length - 1)
+    } else {
+        currentIndex = Math.max(currentIndex - 1, 0);
+    }
+    playCurrentSound();
+  } else if (btn == selectSound) {
     for (var i=0;i<urlList.length;i++) {
       if (nameList[i] == listitem.innerHTML) {
+        sound.stop();
         currentIndex = i;
         playCurrentSound();
       }
     }
+  } else if (btn == progressBar) {
+      sound.jump(sound.duration() * percent);
+      buttonPlay.id = "pause";
   }
-  setSong();
 }
 //Playlist
 function createPlaylist(array) {
@@ -199,7 +224,7 @@ function setSong() {
 }
 //endSong
 function endSong() {
-  if (!sound.isPaused() && (sound.currentTime() == '0' || sound.currentTime().toString().split(".")[0] == sound.duration().toString().split(".")[0])) {
+  if (!sound.isPaused() && end == true && (sound.currentTime() == '0' || sound.currentTime().toString().split(".")[0] == sound.duration().toString().split(".")[0])) {
     if (currentIndex == (urlList.length - 1)) {
       currentIndex = '0';
     } else {
@@ -208,8 +233,6 @@ function endSong() {
     setup(urlList[currentIndex]);
     setSong();
     progressBar.value = sound.currentTime();
+    end = false;
   }
-}
-function pauseEndSong() {
-  console.log('set pauseEndSong');
 }
