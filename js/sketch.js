@@ -68,6 +68,7 @@ function success() {
   unmute(sound);
   sound.play();
   console.log('Sound is loaded : ' + sound.isLoaded());
+	buttonPlay.id = "pause";
 }
 function error(fail) {
   console.log(fail);
