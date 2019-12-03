@@ -68,7 +68,6 @@ function success() {
   unmute(sound);
   sound.play();
   console.log('Sound is loaded : ' + sound.isLoaded());
-	buttonPlay.id = "pause";
 }
 function error(fail) {
   console.log(fail);
@@ -154,6 +153,7 @@ function playCurrentSound() {
   if (!sound.isPlaying() && !sound.isPaused()) {
     setup(urlList[currentIndex]);
     setSong();
+	buttonPlay.id = "pause";
   } else if (sound.isPaused()) {
     sound.play();
     buttonPlay.id = "pause";
