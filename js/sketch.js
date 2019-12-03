@@ -68,7 +68,6 @@ function success() {
   unmute(sound);
   sound.play();
   console.log('Sound is loaded : ' + sound.isLoaded());
-  processLyrics(lrcText[currentIndex])
 }
 function error(fail) {
   console.log(fail);
