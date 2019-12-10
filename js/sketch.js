@@ -148,8 +148,8 @@ function draw() {
 };
 
 //Controls
-//Controls
 function playCurrentSound() {
+  sound.playMode('sustain'); //Safari-Hack
   if (!sound.isPlaying() && !sound.isPaused()) {
     setup(urlList[currentIndex]);
     setSong();
@@ -161,6 +161,7 @@ function playCurrentSound() {
     sound.pause();
     buttonPlay.id = "play";
   }
+  sound.playMode('restart'); //Safari-Hack
 }
 function changeSong(btn) {
   if (btn == buttonPlay) {
@@ -190,9 +191,14 @@ function changeSong(btn) {
       }
     }
   } else if (btn == progressBar) {
-      sound.jump(sound.duration() * percent);
       buttonPlay.id = "pause";
-      setTimeout(function(){ Object.assign(sound, {_playing: true}); }, 100);
+      setTimeout(function(){
+        Object.assign(sound, {_playing: true});
+        sound.playMode('restart'); //Safari-Hack
+      }, 100);
+      sound.stop(); //Safari-Hack
+      sound.playMode('sustain'); //Safari-Hack
+      sound.jump(sound.duration() * percent);
   }
 }
 //Playlist
