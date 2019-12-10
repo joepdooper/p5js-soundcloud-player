@@ -43,7 +43,6 @@ canvas {
 #player {
   position: relative;
   pointer-events: auto;
-  width:100%;
   max-width:300px;
   background-color:white;
   margin:0 auto;
