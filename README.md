@@ -36,6 +36,13 @@ for(var i=0;i<playlist.tracks.length;i++) {
   nameList.push(playlist.tracks[i].title);
 }
 ```
+## Authors
+* **Joep Dooper** - [Joep](https://github.com/joepdooper)
+
+## License
+All images are copyright of Maikel Verkoelen at [Studio Mik](http://www.studiomik.nl).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Note from SoundCloud
 > Due to the high amount of requests recently received, we will no longer be processing API application requests at this time. We are working to re-evaluate our process to make it more efficient.
 
