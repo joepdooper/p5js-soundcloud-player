@@ -40,7 +40,6 @@ for(var i=0;i<playlist.tracks.length;i++) {
 * **Joep Dooper** - [Joep](https://github.com/joepdooper)
 
 ## License
-All images are copyright of Maikel Verkoelen at [Studio Mik](http://www.studiomik.nl).
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Note from SoundCloud
