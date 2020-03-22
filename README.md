@@ -13,7 +13,7 @@ https://joepdooper.github.io/p5js-soundcloud-player
 
 ## How it works
 
-Change [sketch.js](https://github.com/joepdooper/p5js-soundcloud-player/blob/master/js/sketch.js) if you want to load Soundcloud user's tracks or user's sets.
+Change [sketch.js](https://github.com/joepdooper/p5js-soundcloud-player/blob/02497093c28c607def3251dc41f367b61115716a/js/sketch.js#L21) if you want to load Soundcloud user's tracks or user's sets.
 
 ### user/tracks
 ```javascript
