@@ -196,6 +196,7 @@ function changeSong(btn) {
         Object.assign(sound, {_playing: true});
         sound.playMode('restart'); //Safari-Hack
       }, 100);
+      sound.play();
       sound.stop(); //Safari-Hack
       sound.playMode('sustain'); //Safari-Hack
       sound.jump(sound.duration() * percent);
