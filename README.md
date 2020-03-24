@@ -40,6 +40,7 @@ for(var i=0;i<playlist.tracks.length;i++) {
 ## Issues
 https://github.com/processing/p5.js-sound/issues/372
 https://github.com/processing/p5.js-sound/issues/357
+https://github.com/processing/p5.js-sound/issues/430
 
 ## Note from SoundCloud
 > Due to the high amount of requests recently received, we will no longer be processing API application requests at this time. We are working to re-evaluate our process to make it more efficient.
