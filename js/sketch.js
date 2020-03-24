@@ -38,13 +38,6 @@ buttonPlay.addEventListener('click', function() {
     changeSong(buttonPlay);
   }
 }, false);
-function keyPressed() {
-  if (key == ' ') {
-    if (start == true) {
-      changeSong(buttonPlay);
-    }
-  }
-}
 buttonPrev.addEventListener('click', function() {
   if (start == true) {
     changeSong(buttonPrev);
@@ -66,7 +59,23 @@ progressBar.addEventListener("click", function(progbar) {
   changeSong(progressBar);
 }, false);
 
-//loadSound callbacks
+//Keys
+function keyPressed() {
+  if (key == ' ') {
+    if (start == true) {
+      changeSong(buttonPlay);
+    }
+  } else if (keyCode === LEFT_ARROW) {
+    if (start == true) {
+      changeSong(buttonPrev);
+    }
+  } else if (keyCode === RIGHT_ARROW) {
+    if (start == true) {
+      changeSong(buttonNext);
+    }
+  }
+}
+
 //loadSound callbacks
 function success() {
   start = true;
