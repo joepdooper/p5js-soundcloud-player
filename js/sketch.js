@@ -38,6 +38,13 @@ buttonPlay.addEventListener('click', function() {
     changeSong(buttonPlay);
   }
 }, false);
+function keyPressed() {
+  if (key == ' ') {
+    if (start == true) {
+      changeSong(buttonPlay);
+    }
+  }
+}
 buttonPrev.addEventListener('click', function() {
   if (start == true) {
     changeSong(buttonPrev);
