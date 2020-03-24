@@ -167,7 +167,14 @@ function changeSong(btn) {
   if (btn == buttonPlay) {
     playCurrentSound();
   } else if (btn == buttonNext) {
-    sound.stop();
+    if (sound.isPaused()) { //Safari-Hack
+      sound.playMode('sustain'); //Safari-Hack
+      sound.play(); //Safari-Hack
+      sound.stop(); //Safari-Hack
+      sound.playMode('restart'); //Safari-Hack
+    } else {
+      sound.stop();
+    }
     if (currentIndex == (urlList.length - 1)) {
       currentIndex = '0';
     } else {
@@ -175,7 +182,14 @@ function changeSong(btn) {
     }
     playCurrentSound();
   } else if (btn == buttonPrev) {
-    sound.stop();
+    if (sound.isPaused()) { //Safari-Hack
+      sound.playMode('sustain'); //Safari-Hack
+      sound.play(); //Safari-Hack
+      sound.stop(); //Safari-Hack
+      sound.playMode('restart'); //Safari-Hack
+    } else {
+      sound.stop();
+    }
     if (currentIndex == 0) {
       currentIndex = (urlList.length - 1)
     } else {
