@@ -89,6 +89,7 @@ function error(fail) {
   console.log(fail);
 }
 function progress(percent) {
+  progressBar.value = 0;
   start = false;
   loadingBar.value = (percent*100) + 1;
   console.log((percent*100) + 1);
