@@ -166,7 +166,6 @@ function draw() {
 
 //Controls
 function playCurrentSound() {
-  sound.playMode('sustain'); //Safari-Hack
   if (!sound.isPlaying() && !sound.isPaused()) {
     setup(urlList[currentIndex]);
     setSong();
@@ -178,20 +177,14 @@ function playCurrentSound() {
     sound.pause();
     buttonPlay.id = "play";
   }
-  sound.playMode('restart'); //Safari-Hack
 }
 function changeSong(btn) {
   if (btn == buttonPlay) {
     playCurrentSound();
   } else if (btn == buttonNext) {
-    if (sound.isPaused()) { //Safari-Hack
-      sound.playMode('sustain'); //Safari-Hack
-      sound.play(); //Safari-Hack
-      sound.stop(); //Safari-Hack
-      sound.playMode('restart'); //Safari-Hack
-    } else {
-      sound.stop();
-    }
+    sound.playMode('sustain'); //Safari-Hack
+    sound.play(); //Safari-Hack
+    sound.stop();
     if (currentIndex == (urlList.length - 1)) {
       currentIndex = '0';
     } else {
@@ -199,14 +192,9 @@ function changeSong(btn) {
     }
     playCurrentSound();
   } else if (btn == buttonPrev) {
-    if (sound.isPaused()) { //Safari-Hack
-      sound.playMode('sustain'); //Safari-Hack
-      sound.play(); //Safari-Hack
-      sound.stop(); //Safari-Hack
-      sound.playMode('restart'); //Safari-Hack
-    } else {
-      sound.stop();
-    }
+    sound.playMode('sustain'); //Safari-Hack
+    sound.play(); //Safari-Hack
+    sound.stop();
     if (currentIndex == 0) {
       currentIndex = (urlList.length - 1)
     } else {
@@ -223,13 +211,6 @@ function changeSong(btn) {
     }
   } else if (btn == progressBar) {
       buttonPlay.id = "pause";
-      setTimeout(function(){
-        Object.assign(sound, {_playing: true});
-        sound.playMode('restart'); //Safari-Hack
-      }, 100);
-      sound.play();
-      sound.stop(); //Safari-Hack
-      sound.playMode('sustain'); //Safari-Hack
       sound.jump(sound.duration() * percent);
   }
 }
