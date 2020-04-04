@@ -79,7 +79,6 @@ function keyPressed() {
 //loadSound callbacks
 function success() {
   start = true;
-  sound.playMode('restart');
   sound.onended(endSong);
   sound.play();
   console.log('Sound is loaded : ' + sound.isLoaded());
@@ -182,7 +181,6 @@ function changeSong(btn) {
   if (btn == buttonPlay) {
     playCurrentSound();
   } else if (btn == buttonNext) {
-    sound.playMode('sustain'); //Safari-Hack
     sound.play(); //Safari-Hack
     sound.stop();
     if (currentIndex == (urlList.length - 1)) {
@@ -192,7 +190,6 @@ function changeSong(btn) {
     }
     playCurrentSound();
   } else if (btn == buttonPrev) {
-    sound.playMode('sustain'); //Safari-Hack
     sound.play(); //Safari-Hack
     sound.stop();
     if (currentIndex == 0) {
