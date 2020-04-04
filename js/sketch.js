@@ -81,7 +81,6 @@ function success() {
   start = true;
   sound.playMode('restart');
   sound.onended(endSong);
-  unmute(sound);
   sound.play();
   console.log('Sound is loaded : ' + sound.isLoaded());
 }
@@ -99,7 +98,8 @@ function progress(percent) {
 
 //Preload
 function preload() {
-
+  sound = loadSound('audio/unmute.mp3');
+  unmute(sound);
 }
 
 function touchStarted() {
