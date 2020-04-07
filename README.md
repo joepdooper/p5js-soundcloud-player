@@ -39,7 +39,7 @@ for(var i=0;i<playlist.tracks.length;i++) {
 
 ## Issues
 https://github.com/processing/p5.js-sound/issues/372 (Solved)  
-https://github.com/processing/p5.js-sound/issues/357  
+https://github.com/processing/p5.js-sound/issues/357 (Solved with latest release) 
 https://github.com/processing/p5.js-sound/issues/430
 
 ## Note from SoundCloud
