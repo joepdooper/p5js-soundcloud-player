@@ -6,6 +6,9 @@ Music-player with visualisation loading Soundcloud tracks! Works _out-of-the-box
 
 https://joepdooper.github.io/p5js-soundcloud-player
 
+#### Reference
+https://teduur.com
+
 ## Built With
 
 [P5.js](https://p5js.org/reference/#/libraries/p5.sound) - p5.sound extends p5 with Web Audio functionality including audio input, playback, analysis and synthesis.
@@ -36,9 +39,6 @@ for(var i=0;i<playlist.tracks.length;i++) {
   nameList.push(playlist.tracks[i].title);
 }
 ```
-
-## Used
-https://teduur.com
 
 ## Issues
 https://github.com/processing/p5.js-sound/issues/372 (Solved)  
