@@ -2,11 +2,9 @@
 
 Music-player with visualisation loading Soundcloud tracks! Works _out-of-the-box_.
 
-#### Example
-
 https://joepdooper.github.io/p5js-soundcloud-player
 
-#### Reference
+#### Example
 https://teduur.com
 
 ## Built With
