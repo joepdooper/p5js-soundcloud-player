@@ -103,7 +103,7 @@ function preload() {
 
 function touchStarted() {
   if (getAudioContext().state !== 'running') {
-    getAudioContext().resume();
+    unmute(getAudioContext());
   }
 }
 
