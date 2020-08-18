@@ -96,8 +96,7 @@ function progress(percent) {
 
 //Preload
 function preload() {
-  sound = loadSound('audio/unmute.mp3');
-  unmute(sound);
+
 }
 
 function touchStarted() {
