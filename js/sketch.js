@@ -96,7 +96,7 @@ function progress(percent) {
 
 //Preload
 function preload() {
-
+  pixelDensity(window.devicePixelRatio);
 }
 
 function touchStarted() {
@@ -113,7 +113,6 @@ function setup(loadsong) {
   peakDetect = new p5.PeakDetect(20,100);
   fft.setInput(sound);
   amplitude.setInput(sound);
-  pixelDensity(1);
   var cnv = createCanvas(document.getElementById('canvaswrapper').offsetWidth, document.getElementById('canvaswrapper').offsetHeight);
   cnv.parent('canvaswrapper');
   noFill();
