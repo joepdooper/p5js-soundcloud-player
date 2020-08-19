@@ -99,8 +99,11 @@ function preload() {
   pixelDensity(window.devicePixelRatio);
 }
 
+//Touch
+var setPhoneUnmute = false;
 function touchStarted() {
-  if (getAudioContext().state !== 'running') {
+  if (setPhoneUnmute == false && getAudioContext.state !== 'running') {
+    setPhoneUnmute = true;
     unmute(getAudioContext());
   }
 }
