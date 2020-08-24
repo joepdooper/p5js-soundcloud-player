@@ -50,7 +50,7 @@ https://github.com/processing/p5.js-sound/issues/430 (Solved)
 Thank you [Spencer Evans](https://github.com/swevans) for the [unmute.min.js](https://github.com/swevans/unmute) file; it enables web audio playback with the ios mute switch on.
 
 ## Authors
-* **Joep Dooper** - [Joep](https://github.com/joepdooper)
+* **Joep Dooper** - [Joep Dooper](https://github.com/joepdooper)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
