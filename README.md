@@ -11,6 +11,9 @@ https://teduur.com
 [P5.js](https://p5js.org/reference/#/libraries/p5.sound) - p5.sound extends p5 with Web Audio functionality including audio input, playback, analysis and synthesis.
 [SoundCloud API](https://developers.soundcloud.com/docs/api/guide) - Using the SoundCloud API, you can build applications that take sound on the web to the next level.
 
+## Note from SoundCloud
+> Due to the high amount of requests recently received, we will no longer be processing API application requests at this time. We are working to re-evaluate our process to make it more efficient.
+
 ## How it works
 
 Change [sketch.js](https://github.com/joepdooper/p5js-soundcloud-player/blob/02497093c28c607def3251dc41f367b61115716a/js/sketch.js#L21) if you want to load Soundcloud user's tracks or user's sets.
@@ -42,9 +45,6 @@ https://github.com/processing/p5.js-sound/issues/506 (Solved with latest release
 https://github.com/processing/p5.js-sound/issues/372 (Solved)  
 https://github.com/processing/p5.js-sound/issues/357 (Solved with latest release)  
 https://github.com/processing/p5.js-sound/issues/430 (Solved) 
-
-## Note from SoundCloud
-> Due to the high amount of requests recently received, we will no longer be processing API application requests at this time. We are working to re-evaluate our process to make it more efficient.
 
 ## Thanks
 Thank you [Spencer Evans](https://github.com/swevans) for the [unmute.min.js](https://github.com/swevans/unmute) file; it enables web audio playback with the ios mute switch on.
