@@ -16,7 +16,7 @@ https://teduur.com
 
 ## How it works
 
-Edit [sketch.js](https://github.com/joepdooper/p5js-soundcloud-player/blob/02497093c28c607def3251dc41f367b61115716a/js/sketch.js#L21) with your own SoundCloud `client_id`. More info at https://soundcloud.com/you/apps
+Edit [sketch.js](https://github.com/joepdooper/p5js-soundcloud-player/blob/02497093c28c607def3251dc41f367b61115716a/js/sketch.js#L20) with your own SoundCloud `client_id`. More info at https://soundcloud.com/you/apps
 
 ```javascript
 var CLIENT_ID = 'GET-YOURS-AT-SOUNDCLOUD';
