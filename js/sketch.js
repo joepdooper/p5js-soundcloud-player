@@ -17,7 +17,7 @@ var end = false;
 var seconds, minutes, bass, mid, treble, list, ntgr;
 
 //SoundCloud
-var CLIENT_ID = '95f22ed54a5c297b1c41f72d713623ef';
+var CLIENT_ID = 'GET-YOURS-AT-SOUNDCLOUD';
 var PLAYLIST_URL = 'https://soundcloud.com/fftb/sets/party';
 SC.initialize({
   client_id: CLIENT_ID
