@@ -9,12 +9,10 @@ https://teduur.com
 ## Built With
 
 [P5.js](https://p5js.org/reference/#/libraries/p5.sound) - p5.sound extends p5 with Web Audio functionality including audio input, playback, analysis and synthesis.   
-[SoundCloud API](https://developers.soundcloud.com/docs/api/guide) - Using the SoundCloud API, you can build applications that take sound on the web to the next level.
+[SoundCloud API](https://developers.soundcloud.com/docs/api/guide) - [SoundCloud API on GitHub](https://github.com/soundcloud/api) - Using the SoundCloud API, you can build applications that take sound on the web to the next level.
 
 ## Note from SoundCloud
 > Due to the high amount of requests recently received, we will no longer be processing API application requests at this time. We are working to re-evaluate our process to make it more efficient.
-
-[SoundCloud API on GitHub](https://github.com/soundcloud/api)
 
 ## How it works
 
