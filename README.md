@@ -47,6 +47,7 @@ for(var i=0;i<playlist.tracks.length;i++) {
 ```
 
 ## Issues
+https://github.com/soundcloud/api/issues/107#issuecomment-908285769
 https://github.com/processing/p5.js-sound/issues/506 (Solved with latest release)  
 https://github.com/processing/p5.js-sound/issues/372 (Solved)  
 https://github.com/processing/p5.js-sound/issues/357 (Solved with latest release)  
