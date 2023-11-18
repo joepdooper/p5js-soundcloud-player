@@ -1,10 +1,10 @@
 # p5js-soundcloud-player
 
-## Note from SoundCloud
-> The support for JS SDK is deprecated
-
 Music-player with visualisation loading Soundcloud tracks! **Deprecated**
 https://joepdooper.github.io/p5js-soundcloud-player
+
+## Note from SoundCloud
+> The support for JS SDK is deprecated
 
 ## Built With
 
