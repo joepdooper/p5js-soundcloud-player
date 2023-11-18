@@ -1,10 +1,10 @@
 # p5js-soundcloud-player
 
-Music-player with visualisation loading Soundcloud tracks! Works _out-of-the-box_.  
-https://joepdooper.github.io/p5js-soundcloud-player
+## Note from SoundCloud
+> The support for JS SDK is deprecated
 
-**Example**  
-https://teduur.com
+Music-player with visualisation loading Soundcloud tracks! **Deprecated**
+https://joepdooper.github.io/p5js-soundcloud-player
 
 ## Built With
 
@@ -51,7 +51,7 @@ https://github.com/soundcloud/api/issues/107#issuecomment-908285769
 https://github.com/processing/p5.js-sound/issues/506 (Solved with latest release)  
 https://github.com/processing/p5.js-sound/issues/372 (Solved)  
 https://github.com/processing/p5.js-sound/issues/357 (Solved with latest release)  
-https://github.com/processing/p5.js-sound/issues/430 (Solved) 
+https://github.com/processing/p5.js-sound/issues/430 (Solved)
 
 ## Thanks
 Thank you [Spencer Evans](https://github.com/swevans) for the [unmute.min.js](https://github.com/swevans/unmute) file; it enables web audio playback with the ios mute switch on.
